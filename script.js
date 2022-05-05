@@ -3,6 +3,7 @@
         .then(response => response.json())
         .then(data => {
             console.log(data);
+            sendData('https://jsonplaceholder.typicode.com/posts', data);
         })
         .catch(error => {
             console.log(error);
@@ -10,7 +11,7 @@
 
     });
 
-    getData('db.json');
+    //getData('db.json');
 
     const sendData = ((url, str) => {
         fetch(url, {
@@ -28,5 +29,5 @@
             console.log(error);
         });
     });
-
-    sendData('https://jsonplaceholder.typicode.com/posts', getData('db.json'));
+    getData('db.json');
+    //sendData('https://jsonplaceholder.typicode.com/posts', getData('db.json'));
